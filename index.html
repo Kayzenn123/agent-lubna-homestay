@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lubna Homestay — Full House untuk Keluarga di Kuningan</title>
+<meta name="description" content="Lubna Homestay, Cilimus Kuningan: full house 3 kamar tidur untuk 6–8 orang. Mulai Rp600rb/malam. Booking langsung via WhatsApp 0819-0206-8885.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sage:#2f5d50;--sage-deep:#1f4036;--sage-ink:#16302a;
+  --cream:#f7f3ea;--cream2:#efe8d8;--paper:#fffdf8;
+  --terra:#c96f4a;--terra-deep:#a95736;
+  --ink:#22302a;--muted:#6c7a72;--line:#e2d9c4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:6px}
+
+/* topbar */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,243,234,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.02rem;color:var(--sage-ink);text-decoration:none}
+.brand svg{flex:none}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:14px;font-weight:700;font-size:.95rem;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--sage);color:#fff;box-shadow:0 8px 22px rgba(47,93,80,.28)}
+.btn-wa:hover{background:var(--sage-deep)}
+.btn-terra{background:var(--terra);color:#fff;box-shadow:0 8px 22px rgba(201,111,74,.3)}
+.btn-terra:hover{background:var(--terra-deep)}
+.btn-ghost{border-color:var(--line);color:var(--sage-ink);background:var(--paper)}
+.btn-sm{padding:10px 18px;font-size:.86rem;border-radius:12px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--sage);color:#fff;padding:74px 0 0}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(700px 420px at 90% 0%,rgba(201,111,74,.32),transparent 60%),
+  radial-gradient(560px 360px at 8% 100%,rgba(255,255,255,.06),transparent 60%)}
+.hero .wrap{position:relative;z-index:1}
+.kicker{display:inline-block;font-weight:700;font-size:.82rem;letter-spacing:.04em;color:#ffe9dc;background:rgba(201,111,74,.28);border:1px solid rgba(201,111,74,.6);padding:7px 14px;border-radius:999px;margin-bottom:18px}
+h1{font-size:clamp(2.3rem,7.5vw,4rem);line-height:1.04;font-weight:800;letter-spacing:-.025em;max-width:14ch}
+h1 .hl{color:#f6b98d}
+.lead{color:#dfe8e2;font-size:1.06rem;max-width:600px;margin:18px 0 26px}
+.hero .cta-row{padding-bottom:44px}
+.trust{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:34px}
+.trust .pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:12px 16px;font-size:.88rem}
+.trust .pill b{display:block;font-size:1.18rem;color:#fff}
+.trust .pill small{color:#cfddd5}
+.arch{position:relative;height:120px;margin:0 -20px;max-width:none}
+.arch svg{display:block;width:100%;height:100%}
+
+/* sections */
+section{padding:58px 0}
+.sec-title{font-size:clamp(1.45rem,4vw,2.05rem);font-weight:800;letter-spacing:-.02em;color:var(--sage-ink);margin-bottom:10px}
+.sec-sub{color:var(--muted);margin-bottom:30px;max-width:640px}
+.grid{display:grid;gap:16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h3{font-size:1.05rem;margin-bottom:6px;color:var(--sage-ink)}
+.card p{font-size:.93rem;color:var(--muted)}
+.fasil{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.fasil .card{display:flex;gap:14px;align-items:flex-start;padding:18px}
+.fasil .icon{flex:none;width:44px;height:44px;border-radius:14px;background:var(--sage);color:#fff;display:flex;align-items:center;justify-content:center}
+.fasil .icon.alt{background:var(--terra)}
+.fasil h3{font-size:.98rem;margin-bottom:2px}
+.fasil p{font-size:.84rem}
+.note{font-size:.85rem;color:var(--muted);margin-top:18px}
+
+/* rooms */
+.rooms{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.room-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.big-num{font-size:2.6rem;font-weight:800;color:var(--terra);line-height:1}
+.room-grid .card p b{color:var(--ink)}
+.photo-slot{border:1.5px dashed var(--line);border-radius:18px;padding:32px 20px;text-align:center;color:var(--muted);font-size:.9rem;background:var(--cream);margin-top:16px}
+
+/* direct booking */
+.direct{background:var(--sage-deep);color:#f1f5f2;border-radius:24px;padding:44px 34px;margin:0 20px;max-width:1040px}
+.direct .sec-title{color:#fff}
+.direct .sec-sub{color:#c3d4cb}
+.why-grid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.why-grid .card{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18);box-shadow:none}
+.why-grid .card h3{color:#fff}
+.why-grid .card p{color:#c3d4cb}
+
+/* booking card */
+.book{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:34px 28px;box-shadow:0 18px 50px rgba(47,93,80,.12)}
+.book h2{font-size:clamp(1.35rem,4vw,1.9rem);font-weight:800;color:var(--sage-ink);margin-bottom:8px}
+.book p.sub{color:var(--muted);margin-bottom:22px}
+.msg-template{background:var(--cream);border:1px dashed var(--terra);border-radius:14px;padding:18px 20px;font-size:.93rem;color:var(--ink);margin-bottom:22px}
+.msg-template b{color:var(--terra-deep)}
+.wa-num{font-size:1.5rem;font-weight:800;color:var(--sage);text-decoration:none}
+.small{font-size:.84rem;color:var(--muted)}
+
+/* location */
+.loc-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:32px 0 120px;color:var(--muted);font-size:.83rem}
+footer b{color:var(--sage-ink)}
+
+.fab{position:fixed;right:16px;bottom:16px;z-index:60}
+.fab a{display:flex;align-items:center;gap:10px;padding:15px 22px;border-radius:999px;font-weight:800;text-decoration:none;font-size:.95rem;background:var(--sage);color:#fff;box-shadow:0 12px 32px rgba(47,93,80,.4)}
+.fab a:hover{background:var(--sage-deep)}
+
+@media(max-width:560px){
+  .cta-row .btn{flex:1;justify-content:center}
+  .direct{margin:0 12px;padding:34px 22px}
+  .fab a span{display:none}
+  .fab a{padding:17px;border-radius:50%}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#atas" aria-label="Lubna Homestay">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+        <rect width="34" height="34" rx="10" fill="#2f5d50"/>
+        <path d="M10 25v-8c0-3.5 3-6 7-6s7 2.5 7 6v8" stroke="#f7f3ea" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M17 11V6.5M14.5 7.8h5" stroke="#c96f4a" stroke-width="2.2" stroke-linecap="round"/>
+        <rect x="14.5" y="17" width="5" height="8" rx="1.5" fill="#c96f4a"/>
+      </svg>
+      <span>Lubna Homestay</span>
+    </a>
+    <div class="cta-row">
+      <a class="btn btn-wa btn-sm" href="https://wa.me/6281902068885?text=Halo%20Lubna%20Homestay%2C%20saya%20mau%20booking%20full%20house%20tanggal%20%5BISI%20TANGGAL%5D%20untuk%20%5BISI%20JUMLAH%20ORANG%5D%20orang.%20Apakah%20masih%20tersedia%3F%20Terima%20kasih." target="_blank" rel="noopener">Booking via WA</a>
+      <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&query=Lubna+Homestay+Bandorasa+Wetan+Cilimus+Kuningan" target="_blank" rel="noopener">Rute Maps</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="atas">
+  <div class="wrap">
+    <span class="kicker">Guest house full house · Cilimus, Kuningan</span>
+    <h1>Full house untuk keluarga, <span class="hl">serasa di rumah sendiri.</span></h1>
+    <p class="lead">Lubna Homestay — rumah utuh 3 kamar tidur untuk keluarga atau rombongan. Dapur lengkap, teras, taman, dan suasana tenang di Bandorasa Wetan.</p>
+    <div class="cta-row">
+      <a class="btn btn-terra" href="https://wa.me/6281902068885?text=Halo%20Lubna%20Homestay%2C%20saya%20mau%20booking%20full%20house%20tanggal%20%5BISI%20TANGGAL%5D%20untuk%20%5BISI%20JUMLAH%20ORANG%5D%20orang.%20Apakah%20masih%20tersedia%3F%20Terima%20kasih." target="_blank" rel="noopener">Cek ketersediaan via WhatsApp</a>
+      <a class="btn btn-ghost" href="#fasilitas" style="border-color:rgba(255,255,255,.3);color:#fff">Lihat fasilitas</a>
+    </div>
+    <div class="trust">
+      <div class="pill"><b>Mulai Rp600rb<small style="display:inline;font-size:.75rem;color:#cfddd5">/malam</small></b><small>tarif full house — harga dari sumber publik (joglowisata.com)</small></div>
+      <div class="pill"><b>4,96<span style="font-size:.85rem">/5</span></b><small>rating di Airbnb · 23–24 ulasan</small></div>
+      <div class="pill"><b>9,7<span style="font-size:.85rem">/10</span></b><small>rating di bienbi.id</small></div>
+    </div>
+  </div>
+  <div class="arch" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0 120V72C240 72 360 0 600 0s360 72 600 72v48z" fill="#f7f3ea"/></svg>
+  </div>
+</section>
+
+<section id="fasilitas">
+  <div class="wrap">
+    <h2 class="sec-title">Fasilitas</h2>
+    <p class="sec-sub">Semua yang dibutuhkan keluarga — bukan sekadar kamar, tapi satu rumah utuh yang bisa dipakai bersama.</p>
+    <div class="grid fasil">
+      <div class="card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 17h20"/></svg></div>
+        <div><h3>3 kamar tidur</h3><p>Cukup untuk satu keluarga besar atau rombongan.</p></div>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V5a2 2 0 0 1 4 0"/><path d="M7 21l-1 1M17 21l1 1"/></svg></div>
+        <div><h3>2 kamar mandi</h3><p>Tidak perlu antre di pagi hari.</p></div>
+      </div>
+      <div class="card">
+        <div class="icon alt"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10V5a2 2 0 0 0-2-2h-1v4"/><path d="M8 8c-1.5 1.5-3 3.8-3 6.5A5 5 0 0 0 10 20a5 5 0 0 0 5-5.5c0-2.7-1.5-5-3-6.5"/></svg></div>
+        <div><h3>AC + water heater</h3><p>Sejuk dan nyaman di segala cuaca.</p></div>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a7 7 0 0 1 14 0"/><path d="M8.5 15.5a3.5 3.5 0 0 1 7 0"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg></div>
+        <div><h3>WiFi</h3><p>Tetap terhubung selama menginap.</p></div>
+      </div>
+      <div class="card">
+        <div class="icon alt"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/><path d="M10 14h4"/></svg></div>
+        <div><h3>Dapur lengkap</h3><p>Kulkas dan mesin cuci tersedia.</p></div>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7H4z"/><path d="M5 9V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2"/></svg></div>
+        <div><h3>Ruang keluarga</h3><p>Ruang kumpul untuk semua.</p></div>
+      </div>
+      <div class="card">
+        <div class="icon alt"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9"/><path d="M12 9C12 5 9 3 5 3c0 4 3 6 7 6z"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6z"/></svg></div>
+        <div><h3>Teras &amp; taman</h3><p>Ruang santai hijau di depan rumah.</p></div>
+      </div>
+    </div>
+    <p class="note">Daftar fasilitas dari listing publik (Airbnb, Trip.com, Traveloka, bienbi.id). Detail tipe kamar: tanya via WhatsApp.</p>
+  </div>
+</section>
+
+<section class="rooms" id="kamar">
+  <div class="wrap">
+    <h2 class="sec-title">Kamar &amp; kapasitas</h2>
+    <p class="sec-sub">Satu rumah disewa utuh — cocok untuk keluarga besar, arisan, atau rombongan.</p>
+    <div class="grid room-grid">
+      <div class="card">
+        <div class="big-num">3</div>
+        <h3 style="margin-top:8px">kamar tidur</h3>
+        <p>Sewa <b>full house</b> — semua kamar dan ruang untuk satu rombongan, bukan kamar per orang.</p>
+      </div>
+      <div class="card">
+        <div class="big-num">6–8</div>
+        <h3 style="margin-top:8px">kapasitas tamu</h3>
+        <p>Nyaman untuk <b>6 sampai 8 orang</b> sekaligus. Rombongan lebih besar? Tanya via WhatsApp.</p>
+      </div>
+      <div class="card">
+        <div class="big-num">2</div>
+        <h3 style="margin-top:8px">kamar mandi</h3>
+        <p>Dua kamar mandi jadi rombongan tidak perlu bergantian lama.</p>
+      </div>
+    </div>
+    <div class="photo-slot">Area foto kamar &amp; rumah — <b>foto asli dari pemilik</b> setelah deal.</div>
+  </div>
+</section>
+
+<section>
+  <div class="direct">
+    <div style="max-width:1000px;margin:0 auto">
+      <h2 class="sec-title">Kenapa booking langsung?</h2>
+      <p class="sec-sub">Selama ini pemesanan hanya lewat platform OTA — booking langsung via WhatsApp memberi dua keuntungan jelas:</p>
+      <div class="grid why-grid">
+        <div class="card">
+          <h3>Tanpa perantara</h3>
+          <p>Ngobrol langsung dengan pengelola — tanya detail kamar, jam check-in, atau kebutuhan khusus tanpa lewat pihak ketiga.</p>
+        </div>
+        <div class="card">
+          <h3>Harga lebih fleksibel</h3>
+          <p>Tidak ada biaya layanan platform — tanya harga terbaik langsung via WhatsApp.</p>
+        </div>
+        <div class="card">
+          <h3>Konfirmasi cepat</h3>
+          <p>Tanya ketersediaan tanggal dan dapat jawaban langsung, tidak menunggu notifikasi aplikasi.</p>
+        </div>
+      </div>
+      <p class="sec-sub" style="margin-top:22px;margin-bottom:0;font-size:.85rem">Tidak ada klaim diskon persen — harga final dikonfirmasi via WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<section id="booking" style="padding-top:0">
+  <div class="wrap">
+    <div class="book">
+      <h2>Booking via WhatsApp</h2>
+      <p class="sub">Satu pesan, langsung ke pengelola Lubna Homestay.</p>
+      <p style="margin-bottom:14px">Nomor WhatsApp:<br><a class="wa-num" href="https://wa.me/6281902068885?text=Halo%20Lubna%20Homestay%2C%20saya%20mau%20booking%20full%20house%20tanggal%20%5BISI%20TANGGAL%5D%20untuk%20%5BISI%20JUMLAH%20ORANG%5D%20orang.%20Apakah%20masih%20tersedia%3F%20Terima%20kasih." target="_blank" rel="noopener">0819-0206-8885</a></p>
+      <div class="msg-template">
+        <b>Contoh pesan booking</b> (tinggal ganti yang dalam kurung):<br><br>
+        Halo Lubna Homestay, saya mau booking full house tanggal [ISI TANGGAL] untuk [ISI JUMLAH ORANG] orang. Apakah masih tersedia? Terima kasih.
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-wa" href="https://wa.me/6281902068885?text=Halo%20Lubna%20Homestay%2C%20saya%20mau%20booking%20full%20house%20tanggal%20%5BISI%20TANGGAL%5D%20untuk%20%5BISI%20JUMLAH%20ORANG%5D%20orang.%20Apakah%20masih%20tersedia%3F%20Terima%20kasih." target="_blank" rel="noopener">Chat WhatsApp sekarang</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Lubna+Homestay+Bandorasa+Wetan+Cilimus+Kuningan" target="_blank" rel="noopener">Lihat di Google Maps</a>
+      </div>
+      <p class="small" style="margin-top:16px">Nomor WhatsApp dari listing publik. Konfirmasi harga dan ketersediaan langsung via chat.</p>
+    </div>
+  </div>
+</section>
+
+<section id="lokasi" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="sec-title">Lokasi</h2>
+    <p class="sec-sub">Perumahan yang tenang, dekat dengan pusat Cilimus.</p>
+    <div class="grid loc-grid">
+      <div class="card">
+        <h3>Alamat</h3>
+        <p>Jl. Linggarjati Perum Green Duta No. 76, Bandorasa Wetan, Kec. Cilimus, Kab. Kuningan 45551</p>
+        <p style="margin-top:14px"><a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&query=Lubna+Homestay+Bandorasa+Wetan+Cilimus+Kuningan" target="_blank" rel="noopener">Buka rute di Google Maps</a></p>
+      </div>
+      <div class="card">
+        <h3>Area</h3>
+        <p>Kecamatan Cilimus, Kabupaten Kuningan, Jawa Barat — akses mudah dari jalur utama Kuningan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>Lubna Homestay</b> · Bandorasa Wetan, Cilimus, Kuningan · WA 0819-0206-8885</p>
+    <p style="margin-top:8px">Contoh website oleh Zenn (web designer Kuningan) — bukan situs resmi Lubna Homestay. Data dari sumber publik, dicek 21 Okt 2026. Foto diganti foto asli setelah deal.</p>
+  </div>
+</footer>
+
+<div class="fab">
+  <a href="https://wa.me/6281902068885?text=Halo%20Lubna%20Homestay%2C%20saya%20mau%20booking%20full%20house%20tanggal%20%5BISI%20TANGGAL%5D%20untuk%20%5BISI%20JUMLAH%20ORANG%5D%20orang.%20Apakah%20masih%20tersedia%3F%20Terima%20kasih." target="_blank" rel="noopener" aria-label="Booking via WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 21l2-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>
+    <span>Booking WA</span>
+  </a>
+</div>
+
+</body>
+</html>
